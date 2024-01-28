@@ -2,7 +2,6 @@
 
 const express = require('express');
 const app = express();
-// const db = require('./connect.js');
 
 const routes = require('./routes/index.js');
 
