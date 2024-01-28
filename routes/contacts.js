@@ -42,13 +42,12 @@ router.post('/', async (req, res) => {
   };
   try {
     const contactsCollection = client.db('cse341').collection('contacts');
-    const contact = await contactsCollection.insertOne(req.body);
-    res.json(contact);
-    res.status(201).send();
-    return contact._id;
+    const newContact = await contactsCollection.insertOne(contact);
+    const newId = newContact.insertedId;
+    res.status(201).json({ _id: newId });
   } catch (error) {
     console.error('Error creating contact:', error);
-    // res.status(500).send('Internal Server Error');
+    res.status(500).send('Internal Server Error');
   }
 });
 
@@ -87,7 +86,7 @@ router.delete('/:id', async (req, res) => {
     if (!contact) {
       return res.status(404).json({ message: 'Contact not found' });
     }
-    res.status(204).send();
+    res.status(200).send();
   } catch (error) {
     console.error('Error deleting contact:', error);
     res.status(500).send('Internal Server Error');

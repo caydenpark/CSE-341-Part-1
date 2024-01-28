@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Update contact
-PUT http://localhost:3000/contacts/65b5d294c55b8c329bef5b1b
+PUT http://localhost:3000/contacts/
 Content-Type: application/json
 
 {
@@ -30,4 +30,4 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE http://localhost:3000/contacts/65b5d294c55b8c329bef5b1b
+DELETE http://localhost:3000/contacts/
