@@ -1,12 +1,7 @@
 function getEmily() {
-    return "Emily Park";
-}
-
-function getSue() {
-    return "Sue";
+  return 'Emily Park';
 }
 
 module.exports = {
-    "getEmily": getEmily,
-    "getSue": getSue
-}
+  getEmily: getEmily
+};
