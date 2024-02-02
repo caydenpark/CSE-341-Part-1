@@ -1,9 +1,10 @@
 # LOCALHOST
-### Get contact by _id
-GET http://localhost:3000/contacts/65b2c517d57d22f823b8bef5
 
 ### Get all contacts
 GET http://localhost:3000/contacts
+
+### Get contact by _id
+GET http://localhost:3000/contacts/65b2c517d57d22f823b8bef5
 
 ### Create new contact
 POST http://localhost:3000/contacts
@@ -31,3 +32,39 @@ Content-Type: application/json
 
 ### Delete contact
 DELETE http://localhost:3000/contacts/
+
+
+# PRODUCTION - RENDER
+
+### Get all contacts
+GET https://cse341part1.onrender.com/contacts
+
+### Get contact by _id
+GET https://cse341part1.onrender.com/contacts/
+
+### Create new contact
+POST https://cse341part1.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@jd.com",
+    "favoriteColor": "Red",
+    "birthday": "11/11/1800"
+}
+
+### Update contact
+PUT https://cse341part1.onrender.com/contacts/
+Content-Type: application/json
+
+{
+    "firstName": "Johnny",
+    "lastName": "Doe",
+    "email": "johndoe@jd.com",
+    "favoriteColor": "Orange",
+    "birthday": "11/11/1800"
+}
+
+### Delete contact
+DELETE https://cse341part1.onrender.com/contacts/
